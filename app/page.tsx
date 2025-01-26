@@ -7,7 +7,7 @@ export default function Home() {
         Front-end & Back-end developer
       </div>
       <div className="w-1/2">
-        Welcome to my portfolio! I'm Syhyeong, a passionate web developer
+        Welcome to my portfolio! I&apos;m Syhyeong, a passionate web developer
         dedicated to building responsive and user-friendly websites. With a
         strong foundation in both front-end and back-end technologies, I thrive
         on solving complex problems and continuously enhancing my skills. My

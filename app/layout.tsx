@@ -3,11 +3,8 @@
 
 import "aos/dist/aos.css";
 import "./globals.css";
-import { Inter } from "next/font/google";
-import AOS from "aos";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
