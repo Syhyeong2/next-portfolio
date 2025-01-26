@@ -1,3 +1,3 @@
 export default function Articles() {
-  return <div>Articles</div>;
+  return <div>Articles1</div>;
 }
