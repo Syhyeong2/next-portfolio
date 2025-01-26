@@ -1,9 +1,26 @@
+"use client";
+
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Projects from "./Projects";
+
 export default function Resume() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      offset: 200,
+      once: true, // Whether animation should happen only once
+    });
+  }, []);
+
   return (
     <div className="mt-10 flex flex-col items-center justify-center gap-10">
-      <div className="text-4xl font-bold italic">My Timeline</div>
+      <div className="text-4xl font-bold italic" data-aos="fade-up">
+        My Timeline
+      </div>
       <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
-        <li>
+        <li data-aos="fade-up">
           <div className="timeline-middle">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +47,7 @@ export default function Resume() {
           </div>
           <hr />
         </li>
-        <li>
+        <li data-aos="fade-up">
           <hr />
           <div className="timeline-middle">
             <svg
@@ -58,7 +75,7 @@ export default function Resume() {
           </div>
           <hr />
         </li>
-        <li>
+        <li data-aos="fade-up">
           <hr />
           <div className="timeline-middle">
             <svg
@@ -86,7 +103,7 @@ export default function Resume() {
           </div>
           <hr />
         </li>
-        <li>
+        <li data-aos="fade-up">
           <hr />
           <div className="timeline-middle">
             <svg
@@ -111,7 +128,13 @@ export default function Resume() {
           </div>
         </li>
       </ul>
-      <div className="text-4xl font-bold italic ">My Projects</div>
+      <div className="text-4xl font-bold italic" data-aos="fade-up">
+        My Projects
+      </div>
+      <Projects />
+      <div className="text-4xl font-bold italic" data-aos="fade-up">
+        Certifications
+      </div>
     </div>
   );
 }

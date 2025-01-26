@@ -2,10 +2,8 @@
 
 export default function Home() {
   return (
-    <div className="mt-10 flex flex-col items-center justify-center gap-10 bg-base-400">
-      <div className="text-xl font-bold italic">
-        Front-end & Back-end developer
-      </div>
+    <div className="mt-10 flex flex-col items-center justify-center gap-4 bg-base-400">
+      <div className="text-4xl font-bold">Hello!</div>
       <div className="w-1/2">
         Welcome to my portfolio! I&apos;m Syhyeong, a passionate web developer
         dedicated to building responsive and user-friendly websites. With a
@@ -23,7 +21,7 @@ export default function Home() {
         to continuous learning and excellence, I aim to contribute meaningfully
         to every project I undertake.
       </div>
-      <div>My Vision</div>
+      <div className="text-xl font-bold italic">My Vision</div>
       <div className="w-1/2">
         My vision is to become a leading web developer recognized for
         transforming ideas into seamless and impactful digital solutions. I

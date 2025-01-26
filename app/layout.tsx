@@ -17,7 +17,10 @@ export default function RootLayout({
       <body>
         <div className="mt-10 flex flex-col items-center justify-center gap-10 bg-base-400">
           <div className="text-4xl font-bold">Lee Syhyeong</div>
-          <ul className="menu menu-vertical sm:menu-horizontal bg-base-200 rounded-box gap-1">
+          <div className="italic font-light -mt-8">
+            Front-end & Back-end developer
+          </div>
+          <ul className="menu menu-horizontal bg-base-200 rounded-box gap-1">
             <li>
               <Link href="/" className={pathname === "/" ? "active" : ""}>
                 About Me
@@ -31,14 +34,7 @@ export default function RootLayout({
                 Resume
               </Link>
             </li>
-            <li>
-              <Link
-                href="/projects"
-                className={pathname === "/projects" ? "active" : ""}
-              >
-                Projects
-              </Link>
-            </li>
+
             <li>
               <Link
                 href="/articles"
@@ -50,6 +46,28 @@ export default function RootLayout({
           </ul>
         </div>
         {children}
+        <footer className="footer p-10 bg-base-100 text-base-content mt-20">
+          <div>
+            <span className="footer-title">Services</span>
+            <a className="link link-hover">Branding</a>
+            <a className="link link-hover">Design</a>
+            <a className="link link-hover">Marketing</a>
+            <a className="link link-hover">Advertisement</a>
+          </div>
+          <div>
+            <span className="footer-title">Company</span>
+            <a className="link link-hover">About us</a>
+            <a className="link link-hover">Contact</a>
+            <a className="link link-hover">Jobs</a>
+            <a className="link link-hover">Press kit</a>
+          </div>
+          <div>
+            <span className="footer-title">Legal</span>
+            <a className="link link-hover">Terms of use</a>
+            <a className="link link-hover">Privacy policy</a>
+            <a className="link link-hover">Cookie policy</a>
+          </div>
+        </footer>
       </body>
     </html>
   );
