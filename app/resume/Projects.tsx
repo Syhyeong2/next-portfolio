@@ -6,15 +6,16 @@ import AOS from "aos";
 export default function Projects() {
   useEffect(() => {
     AOS.init({
-      duration: 900, // Animation duration
+      duration: 700, // Animation duration
       offset: 100,
       once: true, // Whether animation should happen only once
     });
   }, []);
   return (
-    <div className="flex flex-col items-center justify-center gap-4 w-1/2">
+    <div className="flex flex-col items-center justify-center gap-4 w-[90%] md:w-1/2">
       <div
         data-aos="fade-up"
+        data-aos-delay="100"
         className="flex items-center  gap-4 hover:bg-base-300 cursor-pointer p-4 rounded-3xl w-full"
       >
         <div className="size-28 bg-amber-200 rounded-3xl"></div>
@@ -26,6 +27,7 @@ export default function Projects() {
       </div>
       <div
         data-aos="fade-up"
+        data-aos-delay="200"
         className="flex items-center  gap-4 hover:bg-base-300 cursor-pointer p-4 rounded-3xl w-full"
       >
         <div className="size-28 bg-amber-200 rounded-3xl"></div>
