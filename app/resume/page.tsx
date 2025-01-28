@@ -2,7 +2,6 @@
 
 import "aos/dist/aos.css";
 import Projects from "./Projects";
-import CSSIcon from "@/assets/CSSIcon";
 
 export default function Resume() {
   return (
