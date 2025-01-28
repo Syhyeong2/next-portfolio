@@ -14,7 +14,7 @@ export default function RootLayout({
     <html lang="ko" data-theme="light">
       <body>
         <div className="mt-10 flex flex-col items-center justify-center gap-10 bg-base-400 ">
-          <div className="text-4xl font-bold">Lee Syhyeong</div>
+          <div className="text-4xl font-bold mt-2">Lee Syhyeong</div>
           <div className="italic font-light -mt-8">
             Front-end & Back-end developer
           </div>

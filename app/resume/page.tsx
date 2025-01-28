@@ -2,6 +2,7 @@
 
 import "aos/dist/aos.css";
 import Projects from "./Projects";
+import CSSIcon from "@/assets/CSSIcon";
 
 export default function Resume() {
   return (
@@ -11,11 +12,11 @@ export default function Resume() {
         <div className="badge badge-outline border-amber-950 text-border-amber-950">
           HTML, CSS, JavaScript
         </div>
-        <div className="badge badge-outline">TypeScript</div>
-        <div className="badge badge-outline">React</div>
-        <div className="badge badge-outline">Next.js</div>
-        <div className="badge badge-outline">Spring Boot</div>
-        <div className="badge badge-outline">Git</div>
+        <div className="badge badge-outline cursor-default">TypeScript</div>
+        <div className="badge badge-outline cursor-default">React</div>
+        <div className="badge badge-outline cursor-default">Next.js</div>
+        <div className="badge badge-outline cursor-default">Spring Boot</div>
+        <div className="badge badge-outline cursor-default">Git</div>
       </div>
       <div className="text-4xl font-bold italic">My Timeline</div>
       <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
