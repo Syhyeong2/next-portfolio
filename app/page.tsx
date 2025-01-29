@@ -1,7 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Aos from "aos";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 export default function Home() {
