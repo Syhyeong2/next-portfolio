@@ -1,1 +1,14 @@
- 
+{
+  "header": {
+    "name": "Lee Sihyeong",
+    "intro": "Frontend & Backend Developer"
+  },
+  "aboutMe": {
+    "title": "初めまして！",
+    "title-content": "Welcome to my portfolio! I'm Syhyeong, a passionate web developer dedicated to building responsive and user-friendly websites. With a strong foundation in both front-end and back-end technologies, I thrive on solving complex problems and continuously enhancing my skills. My goal is to deliver high-quality digital solutions that drive success for my clients and users alike.",
+    "mission-title": "私のミッション",
+    "mission-content": "私は情熱的なウェブ開発者として、ユーザー中心のウェブサイトを構築しデジタル体験を向上させることで、革新的なサービスを通じて世界をより良い方向へ変えていくことを使命としています。最新の技術とクリエイティブなUXを融合させることで、お客様の期待に応えるだけでなく、より優れたソリューションを提供できるよう努めています。継続的な学習を通じて、携わるプロジェクトに意味のある貢献を果たすことを目指しています.",
+    "skills-title": "私のビジョン",
+    "skills-content": "私のビジョンは、アイデアをシームレスかつインパクトのあるデジタルソリューションへと変え、その実績によって高く評価されるリーディング・ウェブデベロッパーになることです。ウェブ技術の進化を推進し、よりつながりの深い、誰もが利用しやすいオンライン世界を育むことを目指しています。品質、協力、そして持続可能性を重視し、卓越したウェブ開発を通じて企業や個人にインスピレーションを与え、力を与える存在として成長していきたいと考えています。"
+  }
+}
