@@ -9,8 +9,8 @@ void i18n
   .use(initReactI18next) // react-i18next 바인딩
   .init({
     // 기본 언어, 폴백 언어 설정
-    lng: "en",
-    fallbackLng: "en",
+    lng: "ja",
+    fallbackLng: "ja",
     ns: ["common"],
     defaultNS: "common",
     // 개발 환경에서만 디버그 활성화

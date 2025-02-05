@@ -1,12 +1,35 @@
+"use client";
+
+import { useState, useEffect } from "react";
+
 export default function ThemeBtn() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    // Apply the theme based on the state
+    document.documentElement.setAttribute(
+      "data-theme",
+      isDarkMode ? "dark" : "light"
+    );
+  }, [isDarkMode]);
+
+  const handleThemeChange = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
   return (
     <label className="swap swap-rotate">
       {/* this hidden checkbox controls the state */}
-      <input type="checkbox" className="theme-controller" value="synthwave" />
+      <input
+        type="checkbox"
+        className="theme-controller"
+        checked={isDarkMode}
+        onChange={handleThemeChange}
+      />
 
       {/* sun icon */}
       <svg
-        className="swap-off h-10 w-10 fill-current"
+        className="swap-off h-7 w-7 fill-current"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
       >
@@ -15,7 +38,7 @@ export default function ThemeBtn() {
 
       {/* moon icon */}
       <svg
-        className="swap-on h-10 w-10 fill-current"
+        className="swap-on h-7 w-7 fill-current"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
       >

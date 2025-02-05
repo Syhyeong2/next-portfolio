@@ -29,7 +29,7 @@ export default function Navbar() {
         isSticky ? "opacity-70" : "opacity-100"
       }`}
     >
-      <ul className="menu menu-horizontal bg-base-200 rounded-box gap-1">
+      <ul className="menu menu-horizontal bg-base-200 rounded-box gap-1 ">
         <li>
           <Link href="/" className={pathname === "/" ? "active" : ""}>
             About Me
