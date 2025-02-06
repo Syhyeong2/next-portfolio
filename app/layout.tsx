@@ -5,12 +5,12 @@ import "aos/dist/aos.css";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import I18nProviderWrapper from "./I18nProviderWrapper";
-import TranslationHeader from "@/components/TranslationHeader";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { TbLanguageHiragana } from "react-icons/tb";
 import ThemeBtn from "@/components/themeBtn";
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 // 여기서는 params를 무조건 Promise<{ locale: string }>로 지정합니다.
 type RootLayoutProps = {
@@ -20,6 +20,8 @@ type RootLayoutProps = {
 
 export default function RootLayout({ children, params }: RootLayoutProps) {
   const [currentLocale, setCurrentLocale] = useState<string>("");
+
+  const { t } = useTranslation();
 
   useEffect(() => {
     async function fetchLocale() {
@@ -41,17 +43,22 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
     <html lang={currentLocale} data-theme="light">
       <body>
         <I18nProviderWrapper locale={currentLocale}>
-          <div className="mt-10 flex flex-col items-center justify-center x bg-base-400 ">
-            <TranslationHeader />
-            <div className="flex items-center gap-1 mt-10">
-              <FaGithub className="size-8 hover:bg-base-300 cursor-pointer p-1 rounded-lg" />
-              <FaLinkedin className="size-8 hover:bg-base-300 cursor-pointer p-1 rounded-lg" />
+          <div className="mt-4 flex flex-col justify-center items-center bg-base-400 ">
+            <div className="flex sm:w-1/2 w-[90%] justify-end gap-1">
               <TbLanguageHiragana
                 className="size-8 hover:bg-base-300 cursor-pointer p-1 rounded-lg"
                 onClick={toggleLanguage} // Add onClick handler
               />
               <ThemeBtn />
             </div>
+            <div className="flex items-end gap-1">
+              <div className="text-4xl font-bold mt-2">{t("header.name")}</div>
+              <div className="flex items-center">
+                <FaGithub className="size-6 hover:bg-base-300 cursor-pointer p-1 rounded-lg" />
+                <FaLinkedin className="size-6 hover:bg-base-300 cursor-pointer p-1 rounded-lg -ml-[2px]" />
+              </div>
+            </div>
+            <div className="italic font-normal">{t("header.intro")}</div>{" "}
           </div>
           <Navbar />
           {children}

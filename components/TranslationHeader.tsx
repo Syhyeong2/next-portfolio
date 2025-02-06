@@ -8,7 +8,7 @@ export default function TranslationHeader() {
   return (
     <>
       <div className="text-4xl font-bold ">{t("header.name")}</div>
-      <div className="italic font-light">{t("header.intro")}</div>
+      <div className="italic font-normal">{t("header.intro")}</div>
     </>
   );
 }

@@ -20,7 +20,7 @@ export default function Home() {
       <div className="text-4xl font-bold" data-aos="fade-up">
         {t("aboutMe.title")}
       </div>
-      <div className="md:w-1/2 w-[90%]" data-aos="fade-up" data-aos-delay="50">
+      <div className="md:w-1/2 w-[90%] " data-aos="fade-up" data-aos-delay="50">
         {t("aboutMe.title-content")}
       </div>
       {!isMoreAbout && (

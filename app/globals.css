@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 [data-aos="fade-up"] {
-  transform: translateY(20px); /* 이동 범위를 줄임 */
+  transform: translateY(15px); /* 이동 범위를 줄임 */
   opacity: 0;
   transition-property: transform, opacity;
   transition-duration: 700ms;
