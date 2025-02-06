@@ -41,29 +41,31 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
 
   return (
     <html lang={currentLocale} data-theme="light">
-      <body>
-        <I18nProviderWrapper locale={currentLocale}>
-          <div className="mt-4 flex flex-col justify-center items-center bg-base-400 ">
-            <div className="flex sm:w-1/2 w-[90%] justify-end gap-1">
-              <TbLanguageHiragana
-                className="size-8 hover:bg-base-300 cursor-pointer p-1 rounded-lg"
-                onClick={toggleLanguage} // Add onClick handler
-              />
-              <ThemeBtn />
+      <body className="w-100% flex justify-center">
+        <div className="sm:w-1/2 w-[90%]">
+          <I18nProviderWrapper locale={currentLocale}>
+            <div className="mt-4 flex flex-col justify-center  bg-400 ">
+              <div className="flex  w-[90%] justify-end gap-1">
+                <TbLanguageHiragana
+                  className="size-8 hover:bg-base-300 cursor-pointer p-1 rounded-lg"
+                  onClick={toggleLanguage} // Add onClick handler
+                />
+                <ThemeBtn />
+              </div>
+              <div className="text-4xl font-bold mt-6">{t("header.name")}</div>
+              <div className="italic font-normal">{t("header.intro")}</div>{" "}
             </div>
-            <div className="text-4xl font-bold mt-6">{t("header.name")}</div>
-            <div className="italic font-normal">{t("header.intro")}</div>{" "}
-          </div>
-          <div className="flex items-center justify-center gap-1 mt-4">
-            <FaGithub className="size-8 hover:bg-base-300 cursor-pointer p-1 rounded-lg" />
-            <FaLinkedin className="size-8 hover:bg-base-300 cursor-pointer p-1 rounded-lg -ml-[2px]" />
-          </div>
-          <Navbar />
-          {children}
-          <footer className="footer p-10 bg-base-100 text-base-content mt-20">
-            {/* Footer 내용 */}
-          </footer>
-        </I18nProviderWrapper>
+            <div className="flex  gap-1 mt-4 ">
+              <FaGithub className="size-8 hover:bg-base-300 cursor-pointer p-1 rounded-lg" />
+              <FaLinkedin className="size-8 hover:bg-base-300 cursor-pointer p-1 rounded-lg -ml-[2px]" />
+            </div>
+            <Navbar />
+            {children}
+            <footer className="footer p-10 bg-base-100 text-base-content mt-20">
+              {/* Footer 내용 */}
+            </footer>
+          </I18nProviderWrapper>
+        </div>
       </body>
     </html>
   );

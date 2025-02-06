@@ -16,16 +16,16 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="mt-8 flex flex-col items-center justify-center gap-4 bg-base-400 ">
+    <div className="mt-8 flex flex-col  justify-center gap-4 bg-base-400">
       <div className="text-4xl font-bold" data-aos="fade-up">
         {t("aboutMe.title")}
       </div>
-      <div className="md:w-1/2 w-[90%] " data-aos="fade-up" data-aos-delay="50">
+      <div className=" " data-aos="fade-up" data-aos-delay="50">
         {t("aboutMe.title-content")}
       </div>
       {!isMoreAbout && (
         <div
-          className="btn btn-outline no-animation mt-10"
+          className="btn btn-outline no-animation mt-10 w-1/2 self-center"
           onClick={() => setIsMoreAbout(!isMoreAbout)}
         >
           &darr; Want to know more about me?
