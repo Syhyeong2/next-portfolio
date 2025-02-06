@@ -51,14 +51,12 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
               />
               <ThemeBtn />
             </div>
-            <div className="flex items-end gap-1">
-              <div className="text-4xl font-bold mt-2">{t("header.name")}</div>
-              <div className="flex items-center">
-                <FaGithub className="size-6 hover:bg-base-300 cursor-pointer p-1 rounded-lg" />
-                <FaLinkedin className="size-6 hover:bg-base-300 cursor-pointer p-1 rounded-lg -ml-[2px]" />
-              </div>
-            </div>
+            <div className="text-4xl font-bold mt-2">{t("header.name")}</div>
             <div className="italic font-normal">{t("header.intro")}</div>{" "}
+          </div>
+          <div className="flex items-center justify-center gap-1 mt-4">
+            <FaGithub className="size-8 hover:bg-base-300 cursor-pointer p-1 rounded-lg" />
+            <FaLinkedin className="size-8 hover:bg-base-300 cursor-pointer p-1 rounded-lg -ml-[2px]" />
           </div>
           <Navbar />
           {children}
