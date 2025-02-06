@@ -51,7 +51,7 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
               />
               <ThemeBtn />
             </div>
-            <div className="text-4xl font-bold mt-2">{t("header.name")}</div>
+            <div className="text-4xl font-bold mt-6">{t("header.name")}</div>
             <div className="italic font-normal">{t("header.intro")}</div>{" "}
           </div>
           <div className="flex items-center justify-center gap-1 mt-4">
