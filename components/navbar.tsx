@@ -25,7 +25,7 @@ export default function Navbar() {
 
   return (
     <div
-      className={`sticky top-5 z-50 flex justify-center mt-10 transition-opacity duration-300 ${
+      className={`sticky top-5 z-50 flex justify-center mt-6 transition-opacity duration-300 ${
         isSticky ? "opacity-70" : "opacity-100"
       }`}
     >
