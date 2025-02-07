@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import AOS from "aos";
 
+// 홈 페이지
 export default function Home() {
   const { t } = useTranslation();
   const [isMoreAbout, setIsMoreAbout] = useState(false);
