@@ -12,7 +12,7 @@ export default function Projects() {
     });
   }, []);
   return (
-    <div className="flex flex-col items-center justify-center gap-4 w-[90%] md:w-1/3">
+    <div className="flex flex-col items-center justify-center gap-4 w-[90%] ">
       <div
         data-aos="fade-up"
         data-aos-delay="100"

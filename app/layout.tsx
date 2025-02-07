@@ -33,7 +33,7 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
 
   // Function to toggle language
   const toggleLanguage = () => {
-    const newLocale = currentLocale === "jp" ? "en" : "jp"; // Example toggle between English and Japanese
+    const newLocale = currentLocale === "en" ? "jp" : "en"; // Example toggle between English and Japanese
     setCurrentLocale(newLocale);
     // You might need to update the context or reload the page here
     // For example, you could use a context or a global state management solution
@@ -45,7 +45,7 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
         <div className="sm:w-1/2 w-[90%]">
           <I18nProviderWrapper locale={currentLocale}>
             <div className="mt-4 flex flex-col justify-center  bg-400 ">
-              <div className="flex  w-[90%] justify-end gap-1">
+              <div className="flex justify-end gap-1">
                 <TbLanguageHiragana
                   className="size-8 hover:bg-base-300 cursor-pointer p-1 rounded-lg"
                   onClick={toggleLanguage} // Add onClick handler
@@ -55,7 +55,7 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
               <div className="text-4xl font-bold mt-6">{t("header.name")}</div>
               <div className="italic font-normal">{t("header.intro")}</div>{" "}
             </div>
-            <div className="flex  gap-1 mt-4 ">
+            <div className="flex gap-1 mt-4 mb-4">
               <FaGithub className="size-8 hover:bg-base-300 cursor-pointer p-1 rounded-lg" />
               <FaLinkedin className="size-8 hover:bg-base-300 cursor-pointer p-1 rounded-lg -ml-[2px]" />
             </div>

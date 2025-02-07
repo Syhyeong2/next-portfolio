@@ -5,7 +5,7 @@ import Projects from "./Projects";
 
 export default function Resume() {
   return (
-    <div className="mt-10 flex flex-col items-center justify-center gap-10">
+    <div className="mt-8 flex flex-col items-center justify-center gap-10">
       <div className="text-4xl font-bold italic">My Skill</div>
       <div className="flex flex-wrap gap-2 w-96 items-center justify-center">
         <div className="badge badge-outline cursor-default">
