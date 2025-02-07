@@ -24,6 +24,9 @@ export default function Home() {
       <div className=" " data-aos="fade-up" data-aos-delay="50">
         {t("aboutMe.title-content")}
       </div>
+      <div className=" -mt-2" data-aos="fade-up" data-aos-delay="50">
+        {t("aboutMe.title-content-2")}
+      </div>
       {!isMoreAbout && (
         <div
           className="btn btn-outline no-animation mt-10 w-1/2 self-center"

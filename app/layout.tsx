@@ -56,8 +56,18 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
               <div className="italic font-normal">{t("header.intro")}</div>{" "}
             </div>
             <div className="flex gap-1 mt-4 mb-4">
-              <FaGithub className="size-8 hover:bg-base-300 cursor-pointer p-1 rounded-lg" />
-              <FaLinkedin className="size-8 hover:bg-base-300 cursor-pointer p-1 rounded-lg -ml-[2px]" />
+              <FaGithub
+                className="size-8 hover:bg-base-300 cursor-pointer p-1 rounded-lg"
+                onClick={() => window.open("https://github.com/Syhyeong2")}
+              />
+              <FaLinkedin
+                className="size-8 hover:bg-base-300 cursor-pointer p-1 rounded-lg -ml-[2px]"
+                onClick={() =>
+                  window.open(
+                    "https://www.linkedin.com/in/sihyeong-lee-0a026b26b"
+                  )
+                }
+              />
             </div>
             <Navbar />
             {children}
