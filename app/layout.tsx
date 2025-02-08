@@ -42,9 +42,9 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
   return (
     <html lang={currentLocale} data-theme="light">
       <body className="w-100% flex justify-center">
-        <div className="sm:w-1/2 w-[90%]">
+        <div className="md:w-[691px] w-[90%]">
           <I18nProviderWrapper locale={currentLocale}>
-            <div className="mt-10 flex flex-col justify-center bg-400 ">
+            <div className="sm:mt-10 flex flex-col justify-center bg-400 mt-4">
               <div className="flex justify-end gap-1">
                 <TbLanguageHiragana
                   className="size-8 hover:bg-base-300 cursor-pointer p-1 rounded-lg"

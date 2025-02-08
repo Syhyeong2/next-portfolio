@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -23,6 +24,8 @@ export default function Navbar() {
     };
   }, []);
 
+  const { t } = useTranslation();
+
   return (
     <div
       className={`sticky top-5 z-50 flex justify-center transition-opacity duration-300 ${
@@ -32,7 +35,7 @@ export default function Navbar() {
       <ul className="menu menu-horizontal bg-base-200 rounded-box gap-1 ">
         <li>
           <Link href="/" className={pathname === "/" ? "active" : ""}>
-            About Me
+            {t("navbar.aboutMe")}
           </Link>
         </li>
         <li>
@@ -40,7 +43,7 @@ export default function Navbar() {
             href="/resume"
             className={pathname === "/resume" ? "active" : ""}
           >
-            Resume
+            {t("navbar.resume")}
           </Link>
         </li>
 
@@ -49,7 +52,7 @@ export default function Navbar() {
             href="/articles"
             className={pathname === "/articles" ? "active" : ""}
           >
-            Articles
+            {t("navbar.articles")}
           </Link>
         </li>
       </ul>

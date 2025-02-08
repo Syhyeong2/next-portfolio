@@ -18,7 +18,7 @@ export default function Home() {
 
   return (
     <div className="mt-8 flex flex-col  justify-center gap-4 bg-base-400">
-      <div className="text-4xl font-bold" data-aos="fade-up">
+      <div className="text-3xl font-bold" data-aos="fade-up">
         {t("aboutMe.title")}
       </div>
       <div className=" " data-aos="fade-up" data-aos-delay="50">
@@ -29,10 +29,10 @@ export default function Home() {
       </div>
       {!isMoreAbout && (
         <div
-          className="btn btn-outline no-animation mt-10 w-1/2 self-center"
+          className="mt-6 self-center text-center font-semibold cursor-pointer underline-offset-[6px] underline decoration-base-300 hover:bg-base-300 px-2 py-1 rounded-lg"
           onClick={() => setIsMoreAbout(!isMoreAbout)}
         >
-          &darr; Want to know more about me?
+          &darr; {t("aboutMe.more-about-me-btn")}
         </div>
       )}
 
@@ -40,7 +40,7 @@ export default function Home() {
         <>
           {" "}
           <div
-            className="text-xl font-bold italic"
+            className="text-3xl font-bold italic mt-6"
             data-aos="fade-up"
             data-aos-delay="100"
           >
@@ -50,7 +50,7 @@ export default function Home() {
             {t("aboutMe.mission-content")}
           </div>
           <div
-            className="text-xl font-bold italic"
+            className="text-3xl font-bold italic mt-6"
             data-aos="fade-up"
             data-aos-delay="200"
           >
@@ -60,7 +60,7 @@ export default function Home() {
             {t("aboutMe.skills-content")}
           </div>
           <div
-            className="btn btn-outline no-animation"
+            className="mt-8 self-center text-center font-semibold cursor-pointer underline-offset-[6px] underline decoration-base-300 hover:bg-base-300 px-2 py-1 rounded-lg"
             onClick={() => setIsMoreAbout(!isMoreAbout)}
           >
             &uarr; close
