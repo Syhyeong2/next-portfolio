@@ -1,7 +1,7 @@
 // app/I18nProviderWrapper.tsx
 "use client";
 
-import { I18nextProvider, useTranslation } from "react-i18next";
+import { I18nextProvider } from "react-i18next";
 import { useEffect, useState } from "react";
 import i18n from "../i18n/i18n";
 

@@ -44,19 +44,29 @@ export default function Home() {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            {t("aboutMe.mission-title")}
+            {t("aboutMe.my-story-title")}
           </div>
           <div className="" data-aos="fade-up" data-aos-delay="150">
-            {t("aboutMe.mission-content")}
+            {t("aboutMe.my-story-content")}
           </div>
           <div
             className="text-3xl font-bold italic mt-6"
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            {t("aboutMe.skills-title")}
+            {t("aboutMe.mission-title")}
           </div>
           <div className="" data-aos="fade-up" data-aos-delay="250">
+            {t("aboutMe.mission-content")}
+          </div>
+          <div
+            className="text-3xl font-bold italic mt-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            {t("aboutMe.skills-title")}
+          </div>
+          <div className="" data-aos="fade-up" data-aos-delay="150">
             {t("aboutMe.skills-content")}
           </div>
           <div
