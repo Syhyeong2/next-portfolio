@@ -32,10 +32,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function PostPage({
-  params,
-  searchParams,
-}: PostPageProps) {
+export default async function PostPage({ params }: PostPageProps) {
   const postsDirectory = path.join(process.cwd(), "posts");
   const fullPath = path.join(postsDirectory, `${params.slug}.md`);
 
