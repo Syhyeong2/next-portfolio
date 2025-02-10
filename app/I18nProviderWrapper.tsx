@@ -14,7 +14,6 @@ export default function I18nProviderWrapper({
   children,
   locale,
 }: I18nProviderWrapperProps) {
-  const { t } = useTranslation();
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
