@@ -4,9 +4,9 @@
     "intro": "フロントエンド & バックエンド デベロッパー"
   },
   "navbar": {
-    "aboutMe": "自己紹介",
-    "resume": "履歴書",
-    "articles": "アーティクル"
+    "aboutMe": "About Me",
+    "resume": "Resume",
+    "articles": "Articles"
   },
   "aboutMe": {
     "title": "初めまして！",
@@ -17,5 +17,23 @@
     "skills-title": "私のビジョン",
     "skills-content": "私のビジョンは、アイデアをシームレスかつインパクトのあるデジタルソリューションへと変え、その実績によって高く評価されるリーディング・ウェブデベロッパーになることです。ウェブ技術の進化を推進し、よりつながりの深い、誰もが利用しやすいオンライン世界を育むことを目指しています。品質、協力、そして持続可能性を重視し、卓越したウェブ開発を通じて企業や個人にインスピレーションを与え、力を与える存在として成長していきたいと考えています。",
     "more-about-me-btn": "私のことをもっと知りたいですか？"
+  },
+  "resume": {
+    "time-line-content-university": "チュンアン大学（韓国・ソウル）",
+    "time-line-content-university-1": "社会科学",
+    "time-line-content-university-2": "メディアコミュニケーション",
+    "time-line-content-military": "兵役（軍務）",
+    "time-line-content-military-1": "兵役務行",
+    "time-line-content-military-2": "第21航空団（または、第21航空群）",
+    "time-line-content-bootcamp": "プロジェクトマネージャーブートキャンプ",
+    "time-line-content-bootcamp-1": "ITサービスの企画、デザイン、開発など、プロジェクトマネージャーとして必要な基本的な流れを学習",
+    "time-line-content-bootcamp-2": "企業との協業プロジェクトを通じて、企画およびUXの提案を実施",
+    "time-line-content-study": "Nomadcoder React Study",
+    "time-line-content-study-1": "ReactとTypeScriptを学習",
+    "time-line-content-study-2": "小規模な個人プロジェクトの経験",
+    "time-line-content-study-3": "開発者コミュニティのミーティングに参加",
+    "time-line-content-academy": "SC IT Academy",
+    "time-line-content-academy-1": "ウェブ開発の学習",
+    "time-line-content-academy-2": "ウェブサービス開発チームプロジェクトの経験"
   }
 }

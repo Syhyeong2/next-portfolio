@@ -17,5 +17,23 @@
     "skills-title": "My Vision",
     "skills-content": "My vision is to become a leading web developer recognized for transforming ideas into seamless and impactful digital solutions. I aspire to drive the evolution of web technologies, fostering a more connected and accessible online world. By prioritizing quality, collaboration, and sustainability, I seek to inspire and empower businesses and individuals through exceptional web development.",
     "more-about-me-btn": "Want to know more about me?"
+  },
+  "resume": {
+    "time-line-content-university": "Chung-Ang University (Seoul, Korea)",
+    "time-line-content-university-1": "Social Science",
+    "time-line-content-university-2": "Media Communication",
+    "time-line-content-military": "Military Service",
+    "time-line-content-military-1": "Completed mandatory military duty",
+    "time-line-content-military-2": "21st Air Division (or 21st Air Group)",
+    "time-line-content-bootcamp": "Project Manager Bootcamp",
+    "time-line-content-bootcamp-1": "Acquired foundational knowledge in IT service planning, design, and development essential for a project manager",
+    "time-line-content-bootcamp-2": "Collaborated with corporate partners on projects, contributing to planning and UX proposals",
+    "time-line-content-study": "Nomadcoder React Study",
+    "time-line-content-study-1": "Studied React and TypeScript",
+    "time-line-content-study-2": "Gained experience through small-scale personal projects",
+    "time-line-content-study-3": "Participated in developer community meetups",
+    "time-line-content-academy": "SC IT Academy",
+    "time-line-content-academy-1": "Learned full-stack web development",
+    "time-line-content-academy-2": "Engaged in a team project for web service development"
   }
 }

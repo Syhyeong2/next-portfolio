@@ -36,8 +36,6 @@ export default function I18nProviderWrapper({
     };
   }, [locale]);
 
-  console.log(t("header.name"));
-
   if (!ready) {
     // 로딩 중에는 간단한 스피너나 빈 엘리먼트를 렌더링
     return <span></span>;
