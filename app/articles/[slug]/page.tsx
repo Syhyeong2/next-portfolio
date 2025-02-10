@@ -11,6 +11,9 @@ interface PostPageProps {
   params: {
     slug: string;
   };
+  searchParams: {
+    [key: string]: string | string[] | undefined;
+  };
 }
 
 interface PostData {
@@ -29,7 +32,10 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function PostPage({ params }: PostPageProps) {
+export default async function PostPage({
+  params,
+  searchParams,
+}: PostPageProps) {
   const postsDirectory = path.join(process.cwd(), "posts");
   const fullPath = path.join(postsDirectory, `${params.slug}.md`);
 
