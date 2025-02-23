@@ -11,19 +11,12 @@ import { TbLanguageHiragana } from "react-icons/tb";
 import ThemeBtn from "@/components/themeBtn";
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { Noto_Sans_JP } from "next/font/google";
 
 // 여기서는 params를 무조건 Promise<{ locale: string }>로 지정합니다.
 type RootLayoutProps = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 };
-
-const notoSansJP = Noto_Sans_JP({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-  display: "swap",
-});
 
 export default function RootLayout({ children, params }: RootLayoutProps) {
   const [currentLocale, setCurrentLocale] = useState<string>("");

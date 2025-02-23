@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Projects() {
   useEffect(() => {
@@ -22,9 +23,12 @@ export default function Projects() {
         data-aos-delay="100"
         className="flex items-center gap-2 hover:bg-base-300 cursor-pointer p-4 rounded-3xl w-full"
       >
-        <img
+        <Image
           src="/images/mygg.png"
+          alt="mygg"
           className="md:size-28 size-24 rounded-3xl object-cover shadow-md"
+          width={100}
+          height={100}
         />
         <div className="flex flex-col gap-1 md:ml-10 ml-5">
           <div className="font-extrabold text-xl">
@@ -59,9 +63,12 @@ export default function Projects() {
         data-aos-delay="100"
         className="flex items-center gap-2 hover:bg-base-300 cursor-pointer p-4 rounded-3xl w-full"
       >
-        <img
+        <Image
           src="/images/image copy 2.png"
+          alt="taiso"
           className="md:size-28 size-24 rounded-3xl object-cover shadow-md"
+          width={100}
+          height={100}
         />
         <div className="flex flex-col md:ml-10 ml-5">
           <div className="font-extrabold text-xl">
@@ -96,9 +103,12 @@ export default function Projects() {
         data-aos-delay="100"
         className="flex items-center gap-2 hover:bg-base-300 cursor-pointer p-4 rounded-3xl w-full"
       >
-        <img
+        <Image
           src="/images/myportfolio.png"
+          alt="myportfolio"
           className="md:size-28 size-24 rounded-3xl object-cover shadow-md"
+          width={100}
+          height={100}
         />
         <div className="flex flex-col md:ml-10 ml-5">
           <div className="font-extrabold text-xl">
