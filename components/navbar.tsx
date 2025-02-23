@@ -41,7 +41,7 @@ export default function Navbar() {
         <li>
           <Link
             href="/resume"
-            className={pathname === "/resume" ? "active" : ""}
+            className={pathname.startsWith("/resume") ? "active" : ""}
           >
             {t("navbar.resume")}
           </Link>
@@ -50,7 +50,7 @@ export default function Navbar() {
         <li>
           <Link
             href="/articles"
-            className={pathname === "/articles" ? "active" : ""}
+            className={pathname.startsWith("/articles") ? "active" : ""}
           >
             {t("navbar.articles")}
           </Link>
