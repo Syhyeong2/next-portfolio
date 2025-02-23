@@ -11,6 +11,7 @@ import { TbLanguageHiragana } from "react-icons/tb";
 import ThemeBtn from "@/components/themeBtn";
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { usePathname } from "next/navigation";
 
 // 여기서는 params를 무조건 Promise<{ locale: string }>로 지정합니다.
 type RootLayoutProps = {
@@ -22,6 +23,8 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
   const [currentLocale, setCurrentLocale] = useState<string>("");
 
   const { t } = useTranslation();
+
+  const pathname = usePathname();
 
   useEffect(() => {
     async function fetchLocale() {
@@ -38,6 +41,27 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
     // You might need to update the context or reload the page here
     // For example, you could use a context or a global state management solution
   };
+
+  // '/no-layout' 경로인 경우 전역 레이아웃을 생략
+  if (pathname.startsWith("/resume/project")) {
+    return (
+      <html lang={currentLocale} data-theme="light">
+        <body className="w-100% flex justify-center">
+          <div className="md:w-[691px] w-[90%]">
+            {" "}
+            <div className="flex justify-end gap-1 mt-4 sm:mt-10">
+              <TbLanguageHiragana
+                className="size-8 hover:bg-base-300 cursor-pointer p-1 rounded-lg"
+                onClick={toggleLanguage} // Add onClick handler
+              />
+              <ThemeBtn />
+            </div>
+            {children}
+          </div>
+        </body>
+      </html>
+    );
+  }
 
   return (
     <html lang={currentLocale} data-theme="light">

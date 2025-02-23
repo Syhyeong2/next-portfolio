@@ -18,10 +18,10 @@ export default function Projects() {
   return (
     <div className="flex flex-col items-center justify-center gap-4 md:w-[90%] w-full ">
       <Link
-        href="/resume/project/mygg"
+        href="/resume/project/taiso"
         data-aos="fade-up"
         data-aos-delay="100"
-        className="flex items-center gap-2 hover:bg-base-300 cursor-pointer p-4 rounded-3xl w-full"
+        className="flex items-center gap-2 hover:bg-base-300 cursor-pointer p-4 rounded-3xl w-full collapse"
       >
         <Image
           src="/images/mygg.png"
