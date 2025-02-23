@@ -7,7 +7,7 @@ tags: ["HTTP", "Spring", "Java"]
 
 # HTTP 상태코드와 ResponseEntity, 전역 예외 처리 방법
 
-![image.png](HTTP%20%E1%84%89%E1%85%A1%E1%86%BC%E1%84%90%E1%85%A2%E1%84%8F%E1%85%A9%E1%84%83%E1%85%B3%E1%84%8B%E1%85%AA%20ResponseEntity,%20%E1%84%8C%E1%85%A5%E1%86%AB%E1%84%8B%E1%85%A7%E1%86%A8%20%E1%84%8B%E1%85%A8%E1%84%8B%E1%85%AC%20%E1%84%8E%E1%85%A5%E1%84%85%E1%85%B5%20%207cdfdf65e8424e93bcb86d4fd2e67793/image.png)
+![img.png](/images/img.png)
 
 # **ResponseEntity**
 
