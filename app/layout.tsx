@@ -14,12 +14,15 @@ export const metadata = {
 
 type RootLayoutProps = {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
-export default function RootLayout({ children, params }: RootLayoutProps) {
-  // 서버 컴포넌트에서는 params를 Promise가 아닌 일반 객체로 받을 수 있습니다.
-  const { locale } = params;
+export default async function RootLayout({
+  children,
+  params,
+}: RootLayoutProps) {
+  // params는 Promise이므로 await로 해제합니다.
+  const { locale } = await params;
 
   return (
     <html lang={locale} data-theme="light">
