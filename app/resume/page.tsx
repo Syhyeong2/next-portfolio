@@ -1,7 +1,6 @@
 "use client";
 
 import "aos/dist/aos.css";
-import Projects from "./Projects";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import Aos from "aos";
@@ -180,7 +179,7 @@ export default function Resume() {
           </div>
         </li>
       </ul>
-      <div
+      {/* <div
         className="text-4xl font-bold italic"
         data-aos="fade-up"
         data-aos-delay="100"
@@ -189,7 +188,7 @@ export default function Resume() {
       </div>
       <Projects />
       <div className="text-4xl font-bold italic">Certifications</div>
-      <div>Certifications</div>
+      <div>Certifications</div> */}
     </div>
   );
 }

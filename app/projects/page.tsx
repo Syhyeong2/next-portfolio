@@ -1,6 +1,6 @@
 // app/blog/page.tsx
-import Link from "next/link";
 import { getSortedPostsData, PostMetaData } from "@/lib/posts";
+import Projects from "../resume/Projects";
 
 export const revalidate = 60; // 60초마다 재생성 (옵션)
 
@@ -11,7 +11,8 @@ export default function BlogPage() {
   console.log(posts);
   return (
     <section>
-      <h1>블로그</h1>
+      <div className="flex flex-col items-center justify-center mt-10">
+        {/* <h1>블로그</h1>
       <ul>
         {posts.map(({ slug, title, date, tags }) => (
           <li key={slug}>
@@ -22,7 +23,16 @@ export default function BlogPage() {
             <small>{tags?.join(", ")}</small>
           </li>
         ))}
-      </ul>
+      </ul> */}
+        <div
+          className="text-4xl font-bold italic mb-"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          My Projects
+        </div>
+        <Projects />
+      </div>
     </section>
   );
 }

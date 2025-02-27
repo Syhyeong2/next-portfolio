@@ -1,20 +1,20 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import AOS from "aos";
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
 
-interface Project {
-  id: number;
-  title: string;
-  date: string;
-  content: string;
-  image: string;
-}
+// interface Project {
+//   id: number;
+//   title: string;
+//   date: string;
+//   content: string;
+//   image: string;
+// }
 
 export default function Projects() {
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  // const [selectedPr oject, setSelectedProject] = useState<Project | null>(null);
 
   useEffect(() => {
     AOS.init({
@@ -34,6 +34,7 @@ export default function Projects() {
       date: "2024.11 ~ 2025.01",
       content: t("resume.projects1-content"),
       image: "/images/mygg.png",
+      link: "https://github.com/Syhyeong2/SB_MyGG_README_jp",
     },
     {
       id: 2,
@@ -41,6 +42,7 @@ export default function Projects() {
       date: "2025.01~",
       content: t("resume.projects2-content"),
       image: "/images/image copy 2.png",
+      link: "https://github.com/SCIT46-1/taiso-web",
     },
     {
       id: 3,
@@ -48,6 +50,7 @@ export default function Projects() {
       date: "2025.01~",
       content: t("resume.projects3-content"),
       image: "/images/myportfolio.png",
+      link: "https://github.com/Syhyeong2/next-portfolio",
     },
   ];
 
@@ -56,7 +59,7 @@ export default function Projects() {
       {projects.map((project) => (
         <div
           key={project.id}
-          onClick={() => setSelectedProject(project)}
+          onClick={() => window.open(project.link, "_blank")}
           data-aos="fade-up"
           data-aos-delay="100"
           className="flex items-center gap-2 hover:bg-base-300 cursor-pointer p-4 rounded-3xl w-full"
@@ -98,7 +101,7 @@ export default function Projects() {
         </div>
       ))}
 
-      {/* 모달 창: selectedProject가 있을 경우에만 렌더링 */}
+      {/* 모달 창: selectedProject가 있을 경우에만 렌더링
       {selectedProject && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
@@ -120,7 +123,7 @@ export default function Projects() {
             <div className="mt-4"></div>
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 }

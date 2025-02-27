@@ -10,6 +10,7 @@ import { FaLinkedin } from "react-icons/fa";
 import Navbar from "@/components/navbar";
 import ThemeBtn from "@/components/themeBtn";
 import I18nProviderWrapper from "./I18nProviderWrapper";
+import Footer from "@/components/Footer";
 
 type ClientLayoutProps = {
   children: React.ReactNode;
@@ -74,9 +75,7 @@ export default function ClientLayout({ children, locale }: ClientLayoutProps) {
       </div>
       <Navbar />
       {children}
-      <footer className="footer p-10 bg-base-100 text-base-content mt-20">
-        {/* Footer 내용 */}
-      </footer>
+      <Footer />
     </I18nProviderWrapper>
   );
 }
