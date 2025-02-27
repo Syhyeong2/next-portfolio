@@ -25,7 +25,7 @@ export default function BlogPage() {
         ))}
       </ul> */}
         <div
-          className="text-4xl font-bold italic mb-"
+          className="text-4xl font-bold italic mb-6"
           data-aos="fade-up"
           data-aos-delay="100"
         >
