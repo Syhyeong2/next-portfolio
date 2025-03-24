@@ -34,14 +34,14 @@ export default function Navbar() {
     >
       <ul className="menu menu-horizontal bg-base-200 rounded-box gap-1 ">
         <li>
-          <Link href="/" className={pathname === "/" ? "active" : ""}>
+          <Link href="/" className={pathname === "/" ? "menu-active" : ""}>
             {t("navbar.aboutMe")}
           </Link>
         </li>
         <li>
           <Link
             href="/resume"
-            className={pathname.startsWith("/resume") ? "active" : ""}
+            className={pathname.startsWith("/resume") ? "menu-active" : ""}
           >
             {t("navbar.resume")}
           </Link>
@@ -50,7 +50,7 @@ export default function Navbar() {
         <li>
           <Link
             href="/projects"
-            className={pathname.startsWith("/projects") ? "active" : ""}
+            className={pathname.startsWith("/projects") ? "menu-active" : ""}
           >
             {t("navbar.articles")}
           </Link>
