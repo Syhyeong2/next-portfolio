@@ -7,8 +7,4 @@ export default {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {},
-  plugins: [daisyui],
-  daisyui: {
-    themes: ["lofi", "dark"],
-  },
 } satisfies Config;
