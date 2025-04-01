@@ -247,8 +247,12 @@ export default function Resume() {
       <div className="text-4xl font-bold italic" data-aos="fade-up">
         Languages
       </div>
-      <div className="divider" data-aos="fade-up"></div>
-      <div className="flex flex-col gap-2 mb-20" data-aos="fade-up">
+      <div className="divider" data-aos="fade-up" data-aos-delay="50"></div>
+      <div
+        className="flex flex-col gap-2 mb-20"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
         <div className="flex flex-col gap-2 ml-2">
           <div className="flex items-center gap-2">
             <div className="font-semibold text-xl">
@@ -262,20 +266,45 @@ export default function Resume() {
               {t("resume.languages-japanese")}
             </div>
             <div>-</div>
-            <div>Fluent</div>
+            <div>Business Level</div>
           </div>
           <div className="flex items-center gap-2">
             <div className="font-semibold text-xl">
               {t("resume.languages-english")}
             </div>
             <div>-</div>
-            <div>Fluent</div>
+            <div>Conversational Level</div>
           </div>
         </div>
       </div>
-      <div className="text-4xl font-bold italic">Certifications</div>
-      <div className="divider" data-aos="fade-up"></div>
-      <div>Certifications</div>
+      <div className="text-4xl font-bold italic" data-aos="fade-up">
+        Certifications
+      </div>
+      <div className="divider" data-aos="fade-up" data-aos-delay="50"></div>
+      <div
+        className="flex flex-col gap-2 font-base-content"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        <div className="flex items-center gap-2">
+          <div className="font-semibold text-lg">JLPT</div>
+          <div>-</div>
+          <div>N2 150/180</div>
+        </div>
+        <div className="flex items-center gap-1">
+          <div className="font-semibold text-lg">TOEIC</div>
+          <div>-</div>
+          <div>780</div>
+        </div>
+        <div className="flex items-center gap-1">
+          <div className="font-semibold text-lg">JPT</div>
+          <div>-</div>
+          <div>670</div>
+        </div>
+        <div className="flex items-center gap-1">
+          <div className="font-semibold text-lg">情報処理技師</div>
+        </div>
+      </div>
     </div>
   );
 }
