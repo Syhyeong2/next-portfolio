@@ -33,97 +33,109 @@ export default function Projects() {
       title: t("resume.projects1-title"),
       date: "2024.11 ~ 2025.01",
       content: t("resume.projects1-content"),
+      subContent: t("resume.projects1-sub-content-1"),
+      subContent2: t("resume.projects1-sub-content-2"),
+      subContent3: t("resume.projects1-sub-content-3"),
+      subContent4: t("resume.projects1-sub-content-4"),
+      subContent5: t("resume.projects1-sub-content-5"),
       image: "/images/mygg.png",
       link: "https://github.com/Syhyeong2/SB_MyGG_README_jp",
+      stack: ["React", "TypeScript", "Styled-Components", "MongoDB"],
     },
     {
       id: 2,
       title: t("resume.projects2-title"),
-      date: "2025.01~",
+      date: "2025.01 ~ 2025.03",
       content: t("resume.projects2-content"),
+      subContent: t("resume.projects2-sub-content-1"),
+      subContent2: t("resume.projects2-sub-content-2"),
+      subContent3: t("resume.projects2-sub-content-3"),
+      subContent4: t("resume.projects2-sub-content-4"),
+      subContent5: t("resume.projects2-sub-content-5"),
       image: "/images/image copy 2.png",
       link: "https://github.com/SCIT46-1/taiso-web",
+      stack: ["React", "TypeScript", "Tailwind CSS", "Spring Boot", "MySQL"],
     },
     {
       id: 3,
       title: t("resume.projects3-title"),
       date: "2025.01~",
       content: t("resume.projects3-content"),
+      subContent: t("resume.projects3-sub-content-1"),
+      subContent2: t("resume.projects3-sub-content-2"),
+      subContent3: t("resume.projects3-sub-content-3"),
+      subContent4: t("resume.projects3-sub-content-4"),
+      subContent5: t("resume.projects3-sub-content-5"),
       image: "/images/myportfolio.png",
       link: "https://github.com/Syhyeong2/next-portfolio",
+      stack: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
+    },
+    {
+      id: 4,
+      title: t("resume.projects4-title"),
+      date: "2025.01~",
+      content: t("resume.projects4-content"),
+      subContent: t("resume.projects4-sub-content-1"),
+      subContent2: t("resume.projects4-sub-content-2"),
+      subContent3: t("resume.projects4-sub-content-3"),
+      subContent4: t("resume.projects4-sub-content-4"),
+      subContent5: t("resume.projects4-sub-content-5"),
+      image: "/images/myportfolio.png",
+      link: "https://github.com/Syhyeong2/next-portfolio",
+      stack: ["React", "TypeScript", "Next.js", "Tailwind CSS", "MongoDB"],
     },
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center gap-4 md:w-[90%] w-full">
+    <div className="flex flex-col items-center justify-center gap-6  w-full">
       {projects.map((project) => (
         <div
           key={project.id}
           onClick={() => window.open(project.link, "_blank")}
           data-aos="fade-up"
-          data-aos-delay="100"
-          className="flex items-center gap-2 hover:bg-base-300 cursor-pointer p-4 rounded-3xl w-full"
+          data-aos-delay="150"
+          className="flex flex-col md:flex-row items-start md:items-center gap-2 cursor-pointer p-2 rounded-lg py-3 w-full hover:bg-base-200 group relative transition-all duration-300"
         >
-          <Image
-            src={project.image}
-            alt={project.title}
-            className="md:size-28 size-24 rounded-3xl object-cover shadow-md"
-            width={100}
-            height={100}
-          />
-          <div className="flex flex-col gap-1 md:ml-10 ml-5">
-            <div className="font-extrabold text-xl">{project.title}</div>
+          <div className="flex flex-col gap-1 mb-2 md:mb-auto w-full md:w-3/12">
+            <div className="font-extrabold text-xl flex items-center">
+              {project.title}
+              <div className="ml-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-0 group-hover:translate-x-1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-4 w-4 -ml-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </div>
+            </div>
             <div className="text-xs font-light">{project.date}</div>
+          </div>
+          <div className="flex flex-col gap-1 md:ml-10 w-full md:w-11/12">
             {/* 간략한 내용 미리보기 (원하는 길이로 조절 가능) */}
-            <div className="text-sm mt-2">
-              {project.content.substring(0, 50)}...
+            <div className="mb-2 text font-bold">{project.content}</div>
+            <div className="text-sm">{project.subContent}</div>
+            <div className="text-sm">{project.subContent2}</div>
+            <div className="text-sm">{project.subContent3}</div>
+            <div className="text-sm">{project.subContent4}</div>
+            <div className="text-sm">{project.subContent5}</div>
+            <div className="flex flex-wrap gap-2 mt-2">
+              {project.stack.map((stack, index) => (
+                <div key={index} className="badge badge-outline">
+                  {stack}
+                </div>
+              ))}
             </div>
           </div>
-          <svg
-            data-slot="icon"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-            className="size-6 ml-auto md:mr-8"
-          >
-            <path
-              clipRule="evenodd"
-              fillRule="evenodd"
-              d="M17 4.25A2.25 2.25 0 0 0 14.75 2h-5.5A2.25 2.25 0 0 0 7 4.25v2a.75.75 0 0 0 1.5 0v-2a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v11.5a.75.75 0 0 1-.75.75h-5.5a.75.75 0 0 1-.75-.75v-2a.75.75 0 0 0-1.5 0v2A2.25 2.25 0 0 0 9.25 18h5.5A2.25 2.25 0 0 0 17 15.75V4.25Z"
-            ></path>
-            <path
-              clipRule="evenodd"
-              fillRule="evenodd"
-              d="M1 10a.75.75 0 0 1 .75-.75h9.546l-1.048-.943a.75.75 0 1 1 1.004-1.114l2.5 2.25a.75.75 0 0 1 0 1.114l-2.5 2.25a.75.75 0 1 1-1.004-1.114l1.048-.943H1.75A.75.75 0 0 1 1 10Z"
-            ></path>
-          </svg>
         </div>
       ))}
-
-      {/* 모달 창: selectedProject가 있을 경우에만 렌더링
-      {selectedProject && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
-          onClick={() => setSelectedProject(null)}
-        >
-          <div
-            className="bg-white p-6 rounded-lg md:w-[681px]"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="flex justify-between items-center">
-              <h2 className="text-xl font-bold">{selectedProject.title}</h2>
-              <button
-                onClick={() => setSelectedProject(null)}
-                className="text-gray-500 hover:text-gray-700"
-              >
-                Close
-              </button>
-            </div>
-            <div className="mt-4"></div>
-          </div>
-        </div>
-      )} */}
     </div>
   );
 }
