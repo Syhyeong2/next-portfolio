@@ -33,7 +33,7 @@ export default function ClientLayout({ children, locale }: ClientLayoutProps) {
   };
 
   // '/resume/project' 경로인 경우 별도 레이아웃 처리
-  if (pathname.startsWith("/resume/project")) {
+  if (pathname.startsWith("/projects/")) {
     return (
       <I18nProviderWrapper locale={currentLocale}>
         <div className="flex justify-end gap-1 mt-4 sm:mt-10">

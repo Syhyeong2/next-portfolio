@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import { useTranslation } from "react-i18next";
+import Link from "next/link";
 
 interface Project {
   id: number;
@@ -46,7 +47,7 @@ export default function Projects() {
       subContent5: t("resume.projects1-sub-content-5"),
       image: "/images/mygg.png",
       link: "https://github.com/Syhyeong2/SB_MyGG_README_jp",
-      stack: ["React", "TypeScript", "Styled-Components", "MongoDB"],
+      stack: ["React", "TypeScript", "Tailwind CSS", "Spring Boot", "MySQL"],
     },
     {
       id: 2,
@@ -60,7 +61,7 @@ export default function Projects() {
       subContent5: t("resume.projects2-sub-content-5"),
       image: "/images/image copy 2.png",
       link: "https://github.com/SCIT46-1/taiso-web",
-      stack: ["React", "TypeScript", "Tailwind CSS", "Spring Boot", "MySQL"],
+      stack: ["React", "TypeScript", "Styled-Components", "MongoDB"],
     },
     {
       id: 3,
@@ -123,9 +124,9 @@ export default function Projects() {
   return (
     <div className="flex flex-col items-center justify-center gap-6  w-full">
       {projects.map((project) => (
-        <div
+        <Link
           key={project.id}
-          onClick={() => window.open(project.link, "_blank")}
+          href={`/projects/${project.id}`}
           data-aos="fade-up"
           data-aos-delay="150"
           className="flex flex-col md:flex-row items-start md:items-center gap-2 cursor-pointer p-2 rounded-lg py-3 w-full hover:bg-base-200 group relative transition-all duration-300"
@@ -168,7 +169,7 @@ export default function Projects() {
               ))}
             </div>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   );
