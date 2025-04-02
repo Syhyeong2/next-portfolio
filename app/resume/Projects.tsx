@@ -3,15 +3,21 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import { useTranslation } from "react-i18next";
-import Image from "next/image";
 
-// interface Project {
-//   id: number;
-//   title: string;
-//   date: string;
-//   content: string;
-//   image: string;
-// }
+interface Project {
+  id: number;
+  title: string;
+  date: string;
+  content: string;
+  image: string;
+  link: string;
+  stack: string[];
+  subContent: string;
+  subContent2: string;
+  subContent3: string;
+  subContent4: string;
+  subContent5: string;
+}
 
 export default function Projects() {
   // const [selectedPr oject, setSelectedProject] = useState<Project | null>(null);
@@ -27,7 +33,7 @@ export default function Projects() {
   const { t } = useTranslation("common");
 
   // 프로젝트 데이터를 배열로 관리 (필요에 따라 데이터를 확장할 수 있습니다)
-  const projects = [
+  const projects: Project[] = [
     {
       id: 1,
       title: t("resume.projects1-title"),
@@ -68,12 +74,12 @@ export default function Projects() {
       subContent5: t("resume.projects3-sub-content-5"),
       image: "/images/myportfolio.png",
       link: "https://github.com/Syhyeong2/next-portfolio",
-      stack: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
+      stack: ["Next.js 15", "TypeScript", "Tailwind CSS"],
     },
     {
       id: 4,
       title: t("resume.projects4-title"),
-      date: "2025.01~",
+      date: "2024.08",
       content: t("resume.projects4-content"),
       subContent: t("resume.projects4-sub-content-1"),
       subContent2: t("resume.projects4-sub-content-2"),
@@ -82,7 +88,35 @@ export default function Projects() {
       subContent5: t("resume.projects4-sub-content-5"),
       image: "/images/myportfolio.png",
       link: "https://github.com/Syhyeong2/next-portfolio",
-      stack: ["React", "TypeScript", "Next.js", "Tailwind CSS", "MongoDB"],
+      stack: ["Next.js 14", "TypeScript", "Tailwind CSS", "PostgreSQL", "Zod"],
+    },
+    {
+      id: 5,
+      title: t("resume.projects5-title"),
+      date: "2024.07",
+      content: t("resume.projects5-content"),
+      subContent: t("resume.projects5-sub-content-1"),
+      subContent2: t("resume.projects5-sub-content-2"),
+      subContent3: t("resume.projects5-sub-content-3"),
+      subContent4: t("resume.projects5-sub-content-4"),
+      subContent5: t("resume.projects5-sub-content-5"),
+      image: "/images/myportfolio.png",
+      link: "https://github.com/Syhyeong2/next-portfolio",
+      stack: ["React", "TypeScript", "Styled-Components", "Framer-Motion"],
+    },
+    {
+      id: 6,
+      title: t("resume.projects6-title"),
+      date: "2024.05",
+      content: t("resume.projects6-content"),
+      subContent: t("resume.projects6-sub-content-1"),
+      subContent2: t("resume.projects6-sub-content-2"),
+      subContent3: t("resume.projects6-sub-content-3"),
+      subContent4: t("resume.projects6-sub-content-4"),
+      subContent5: t("resume.projects6-sub-content-5"),
+      image: "/images/myportfolio.png",
+      link: "https://github.com/Syhyeong2/next-portfolio",
+      stack: ["React", "TypeScript", "Styled-Components", "Recoil"],
     },
   ];
 
@@ -99,7 +133,7 @@ export default function Projects() {
           <div className="flex flex-col gap-1 mb-2 md:mb-auto w-full md:w-3/12">
             <div className="font-extrabold text-xl flex items-center">
               {project.title}
-              <div className="ml-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-0 group-hover:translate-x-1">
+              <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-0 group-hover:translate-x-1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-4 w-4 -ml-1"
@@ -118,7 +152,7 @@ export default function Projects() {
             </div>
             <div className="text-xs font-light">{project.date}</div>
           </div>
-          <div className="flex flex-col gap-1 md:ml-10 w-full md:w-11/12">
+          <div className="flex flex-col gap-1 md:ml-6 w-full md:w-[80%]">
             {/* 간략한 내용 미리보기 (원하는 길이로 조절 가능) */}
             <div className="mb-2 text font-bold">{project.content}</div>
             <div className="text-sm">{project.subContent}</div>
