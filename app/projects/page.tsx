@@ -11,7 +11,7 @@ export default function BlogPage() {
   console.log(posts);
   return (
     <section>
-      <div className="flex flex-col items-center justify-center mt-10">
+      <div className="flex flex-col items-center justify-center mt-8">
         {/* <h1>블로그</h1>
       <ul>
         {posts.map(({ slug, title, date, tags }) => (
@@ -25,12 +25,13 @@ export default function BlogPage() {
         ))}
       </ul> */}
         <div
-          className="text-4xl font-bold italic mb-6"
+          className="text-4xl font-bold italic mr-auto"
           data-aos="fade-up"
-          data-aos-delay="100"
+          data-aos-delay=""
         >
           My Projects
         </div>
+        <div className="divider" data-aos="fade-up" data-aos-delay="50"></div>
         <Projects />
       </div>
     </section>
