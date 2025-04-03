@@ -12,6 +12,7 @@ export interface PostMetaData {
   date: string;
   description?: string;
   tags?: string[];
+  videoUrl?: string;
 }
 
 export interface PostData extends PostMetaData {
@@ -54,7 +55,7 @@ export async function getPostData(slug: string): Promise<PostData> {
   const matterResult = matter(fileContents);
 
   const processedContent = await remark()
-    .use(html)
+    .use(html, { sanitize: false })
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
 
