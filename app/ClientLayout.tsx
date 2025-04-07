@@ -19,12 +19,42 @@ type ClientLayoutProps = {
 
 export default function ClientLayout({ children, locale }: ClientLayoutProps) {
   const [currentLocale, setCurrentLocale] = useState<string>(locale);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const { t } = useTranslation();
   const pathname = usePathname();
+
+  // Initialize theme from localStorage
+  useEffect(() => {
+    // Check if we're in the browser environment
+    if (typeof window !== "undefined") {
+      const savedTheme = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+
+      // If there's a saved theme, use it; otherwise, use the system preference
+      const initialDarkMode =
+        savedTheme === "dark" || (!savedTheme && prefersDark);
+      setIsDarkMode(initialDarkMode);
+    }
+  }, []);
 
   useEffect(() => {
     setCurrentLocale(locale);
   }, [locale]);
+
+  useEffect(() => {
+    // Apply the theme based on the state
+    document.documentElement.setAttribute(
+      "data-theme",
+      isDarkMode ? "dark" : "light"
+    );
+
+    // Save the theme preference to localStorage
+    if (typeof window !== "undefined") {
+      localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+    }
+  }, [isDarkMode]);
 
   const toggleLanguage = () => {
     const newLocale = currentLocale === "en" ? "jp" : "en";
@@ -41,7 +71,7 @@ export default function ClientLayout({ children, locale }: ClientLayoutProps) {
             className="size-8 hover:bg-base-300 cursor-pointer p-1 rounded-lg"
             onClick={toggleLanguage}
           />
-          <ThemeBtn />
+          <ThemeBtn isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
         </div>
         {children}
       </I18nProviderWrapper>
@@ -56,7 +86,7 @@ export default function ClientLayout({ children, locale }: ClientLayoutProps) {
             className="size-8 hover:bg-base-300 cursor-pointer p-1 rounded-lg"
             onClick={toggleLanguage}
           />
-          <ThemeBtn />
+          <ThemeBtn isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
         </div>
         <div className="text-4xl font-bold mt-8">{t("header.name")}</div>
         <div className="italic font-normal">{t("header.intro")}</div>

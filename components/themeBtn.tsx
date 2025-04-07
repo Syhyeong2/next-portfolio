@@ -1,18 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
+interface ThemeBtnProps {
+  isDarkMode: boolean;
+  setIsDarkMode: (isDarkMode: boolean) => void;
+}
 
-export default function ThemeBtn() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  useEffect(() => {
-    // Apply the theme based on the state
-    document.documentElement.setAttribute(
-      "data-theme",
-      isDarkMode ? "dark" : "light"
-    );
-  }, [isDarkMode]);
-
+export default function ThemeBtn({ isDarkMode, setIsDarkMode }: ThemeBtnProps) {
   const handleThemeChange = () => {
     setIsDarkMode(!isDarkMode);
   };

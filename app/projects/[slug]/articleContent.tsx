@@ -14,6 +14,7 @@ interface PostData {
 export default function ArticleContent({ slug }: { slug: string }) {
   const [postData, setPostData] = useState<PostData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
     async function fetchPostData() {
@@ -22,7 +23,6 @@ export default function ArticleContent({ slug }: { slug: string }) {
         const response = await fetch(`/api/post/${slug}`);
         const data = await response.json();
         setPostData(data);
-        console.log(data);
       } catch (error) {
         console.error("마크다운 로딩 중 오류:", error);
       } finally {
@@ -33,6 +33,33 @@ export default function ArticleContent({ slug }: { slug: string }) {
     fetchPostData();
   }, [slug]);
 
+  useEffect(() => {
+    // Check theme on mount and listen for changes
+    const updateThemeState = () => {
+      const theme = document.documentElement.getAttribute("data-theme");
+      setIsDarkMode(theme === "dark");
+    };
+
+    // Initial check
+    updateThemeState();
+
+    // Setup observer to watch for theme changes
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (
+          mutation.type === "attributes" &&
+          mutation.attributeName === "data-theme"
+        ) {
+          updateThemeState();
+        }
+      });
+    });
+
+    observer.observe(document.documentElement, { attributes: true });
+
+    return () => observer.disconnect();
+  }, []);
+
   if (isLoading) {
     // 콘텐츠 로딩 중 표시할 로딩 상태
     // loading.tsx가 페이지 수준에서 로딩을 처리하므로 여기서는 간단히 표시
@@ -40,7 +67,9 @@ export default function ArticleContent({ slug }: { slug: string }) {
   }
 
   if (!postData) {
-    return <div className="text-center py-10">Can not find content</div>;
+    return (
+      <div className="text-center py-10 text-error">Can not find content</div>
+    );
   }
 
   return (
@@ -51,7 +80,16 @@ export default function ArticleContent({ slug }: { slug: string }) {
           {postData.videoUrl.includes("youtube.com") ||
           postData.videoUrl.includes("youtu.be") ? (
             // YouTube 비디오 임베드
-            <div className="aspect-video">
+            <div
+              className={`
+              aspect-video rounded-lg overflow-hidden
+              ${
+                isDarkMode
+                  ? "border border-base-content/20"
+                  : "border border-base-300"
+              }
+            `}
+            >
               <iframe
                 src={postData.videoUrl.replace("watch?v=", "embed/")}
                 className="w-full h-full rounded-lg"
@@ -64,13 +102,22 @@ export default function ArticleContent({ slug }: { slug: string }) {
             <video
               src={postData.videoUrl}
               controls
-              className="w-full rounded-lg"
+              className={`
+                w-full rounded-lg
+                ${
+                  isDarkMode
+                    ? "border border-base-content/20"
+                    : "border border-base-300"
+                }
+              `}
               poster="/images/video-poster.jpg" // 필요시 썸네일 이미지 추가
             />
           )}
         </div>
       )}
-      <MarkdownRenderer content={postData.contentHtml} />
+      <div className="bg-base-100 text-base-content rounded-lg p-4 shadow-sm">
+        <MarkdownRenderer content={postData.contentHtml} />
+      </div>
     </div>
   );
 }

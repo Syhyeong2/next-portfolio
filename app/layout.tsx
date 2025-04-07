@@ -25,7 +25,7 @@ export default async function RootLayout({
   const { locale } = await params;
 
   return (
-    <html lang={locale} data-theme="light">
+    <html lang={locale}>
       <body className="w-100% flex justify-center">
         <div className="md:w-[691px] w-[90%]">
           {/* 인터랙티브한 부분은 클라이언트 컴포넌트에서 처리 */}

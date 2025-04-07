@@ -21,3 +21,144 @@
   width: 0.8rem; /* 원하는 너비로 조절 */
   height: 0.8rem; /* 원하는 높이로 조절 */
 }
+
+/* 마크다운 콘텐츠에 대한 스타일링 */
+.markdown-content {
+  color: hsl(var(--bc));
+  background-color: hsl(var(--b1));
+}
+
+.markdown-content.dark-mode {
+  background-color: hsl(var(--b1));
+}
+
+.markdown-content.light-mode {
+  background-color: hsl(var(--b1));
+}
+
+.markdown-content.dark-mode code:not(pre code) {
+  background-color: hsl(var(--n) / 0.8);
+  color: hsl(var(--nc));
+}
+
+.markdown-content.dark-mode pre {
+  background-color: hsl(var(--n));
+  color: hsl(var(--nc));
+}
+
+.markdown-content.dark-mode blockquote {
+  background-color: hsl(var(--n) / 0.3);
+  border-left: 4px solid hsl(var(--p));
+}
+
+.markdown-content.dark-mode a {
+  color: hsl(var(--p));
+}
+
+.markdown-content.dark-mode a:hover {
+  color: hsl(var(--pf));
+}
+
+.markdown-content.dark-mode table {
+  border-collapse: collapse;
+  border: 1px solid hsl(var(--n));
+}
+
+.markdown-content.dark-mode th {
+  background-color: hsl(var(--n));
+  color: hsl(var(--nc));
+  border: 1px solid hsl(var(--n) / 0.8);
+  padding: 0.5rem;
+}
+
+.markdown-content.dark-mode td {
+  border: 1px solid hsl(var(--n) / 0.5);
+  padding: 0.5rem;
+}
+
+.markdown-content.light-mode pre {
+  background-color: hsl(var(--b2));
+  color: hsl(var(--bc));
+}
+
+.markdown-content img {
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+  max-width: 100%;
+}
+
+/* 다크 모드 지원을 위한 마크다운 스타일 */
+[data-theme="dark"] .markdown-body {
+  color-scheme: dark;
+  --color-prettylights-syntax-comment: #8b949e;
+  --color-prettylights-syntax-constant: #79c0ff;
+  --color-prettylights-syntax-entity: #d2a8ff;
+  --color-prettylights-syntax-storage-modifier-import: #c9d1d9;
+  --color-prettylights-syntax-keyword: #ff7b72;
+  --color-prettylights-syntax-string: #a5d6ff;
+  --color-prettylights-syntax-variable: #ffa657;
+  --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
+  --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
+  --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
+  --color-prettylights-syntax-carriage-return-text: #f0f6fc;
+  --color-prettylights-syntax-carriage-return-bg: #b62324;
+  --color-prettylights-syntax-string-regexp: #7ee787;
+  --color-prettylights-syntax-markup-list: #f2cc60;
+  --color-prettylights-syntax-markup-heading: #1f6feb;
+  --color-prettylights-syntax-markup-italic: #c9d1d9;
+  --color-prettylights-syntax-markup-bold: #c9d1d9;
+  --color-prettylights-syntax-markup-deleted-text: #ffdcd7;
+  --color-prettylights-syntax-markup-deleted-bg: #67060c;
+  --color-prettylights-syntax-markup-inserted-text: #aff5b4;
+  --color-prettylights-syntax-markup-inserted-bg: #033a16;
+  --color-prettylights-syntax-markup-changed-text: #ffdfb6;
+  --color-prettylights-syntax-markup-changed-bg: #5a1e02;
+  --color-prettylights-syntax-markup-ignored-text: #c9d1d9;
+  --color-prettylights-syntax-markup-ignored-bg: #1158c7;
+  --color-prettylights-syntax-meta-diff-range: #d2a8ff;
+  --color-prettylights-syntax-brackethighlighter-angle: #8b949e;
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #484f58;
+  --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
+  --color-fg-default: #c9d1d9;
+  --color-fg-muted: #8b949e;
+  --color-fg-subtle: #6e7681;
+  --color-canvas-default: #0d1117;
+  --color-canvas-subtle: #161b22;
+  --color-border-default: #30363d;
+  --color-border-muted: #21262d;
+  --color-neutral-muted: rgba(110, 118, 129, 0.4);
+  --color-accent-fg: #58a6ff;
+  --color-accent-emphasis: #1f6feb;
+  --color-attention-subtle: rgba(187, 128, 9, 0.15);
+}
+
+/* DaisyUI 색상 변수를 사용하여 markdown-body의 기본 배경색 설정 */
+.markdown-body {
+  background-color: transparent !important;
+}
+
+/* 코드 블록 스타일 - 강제 적용을 위해 !important 사용 */
+[data-theme="dark"] .markdown-body pre,
+[data-theme="dark"] pre {
+  background-color: hsl(var(--n)) !important;
+  color: hsl(var(--nc)) !important;
+}
+
+[data-theme="dark"] .markdown-body code,
+[data-theme="dark"] code:not(pre code) {
+  background-color: hsl(var(--n) / 0.7) !important;
+  color: hsl(var(--nc)) !important;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+[data-theme="dark"] .markdown-content h1,
+[data-theme="dark"] .markdown-content h2,
+[data-theme="dark"] .markdown-content h3,
+[data-theme="dark"] .markdown-content h4,
+[data-theme="dark"] .markdown-content h5,
+[data-theme="dark"] .markdown-content h6,
+[data-theme="dark"] .markdown-content p,
+[data-theme="dark"] .markdown-content li {
+  color: hsl(var(--bc)) !important;
+}
