@@ -38,7 +38,7 @@ export default function Projects() {
     {
       id: 1,
       title: t("resume.projects1-title"),
-      date: "2024.11 ~ 2025.01",
+      date: "2025.01 ~ 2025.03",
       content: t("resume.projects1-content"),
       subContent: t("resume.projects1-sub-content-1"),
       subContent2: t("resume.projects1-sub-content-2"),
@@ -52,7 +52,7 @@ export default function Projects() {
     {
       id: 2,
       title: t("resume.projects2-title"),
-      date: "2025.01 ~ 2025.03",
+      date: "2024.11 ~ 2025.01",
       content: t("resume.projects2-content"),
       subContent: t("resume.projects2-sub-content-1"),
       subContent2: t("resume.projects2-sub-content-2"),
